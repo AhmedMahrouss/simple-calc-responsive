@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .attribution { color:#fff; font-size: 15px; text-align: center; position: absolute; bottom: 0; left: 50%; transform: translate(-50%,-50%);}
-    .attribution a{ color: hsl(228, 45%, 44%); text-decoration: none;}
+    .attribution a{ color: darkturquoise; text-decoration: none;}
   </style>
 </head>
 <body>
@@ -17,35 +17,52 @@
 <div class="container">
 <!-- Start Title -->
 <div class="title">
-  <p>calc</p>
+  <p class="calc">calc</p>
   <div class="themes">
-    <span>theme</span>
-    <p>1 2 3</p>
-    <span><span></span></span>
+    <span id="text">theme</span>
+<div class="changeTheme">
+  <p>1 2 3</p>
+  <p id="bigCircle"><span id="smallCircle"></p></p>
+</div>
   </div>
 </div>
 <!-- End Title -->
 <!-- Start Output -->
 <div class="output">
-  <p>399,981</p>
+  <p></p>
+  <p style="display: none;"></p>
 </div>
 <!-- End Output -->
 <!-- Start Inputs -->
 <div class="inputs">
 <div class="row">
-<span>7</span><span>8</span><span>9</span><span>DEL</span>
+<span data-num="7">7</span>
+<span data-num="8">8</span>
+<span data-num="9">9</span>
+<span data-num="" id="del">DEL</span>
 </div>
 <div class="row">
-<span>4</span><span>5</span><span>6</span><span>+</span>
+<span data-num="4">4</span>
+<span data-num="5">5</span>
+<span data-num="6">6</span>
+<span data-num="+" id="addition">+</span>
 </div>
 <div class="row">
-<span>1</span><span>2</span><span>3</span><span>-</span>
+<span data-num="1">1</span>
+<span data-num="2">2</span>
+<span data-num="3">3</span>
+<span data-num="-" id="subtraction">-</span>
 </div>
 <div class="row">
-<span>.</span><span>0</span><span>/</span><span>x</span>
+<span data-num=".">.</span>
+<span data-num="0">0</span>
+<span data-num="/" id="divided">/</span>
+<span data-num="*
+" id="multiblication">x</span>
 </div>
 <div class="btns">
-<button>Reset</button><button>=</button>
+<span id="reset" data-num="">Reset</span>
+<span id="equal" data-num="">=</span>
 </div>
 </div>
 <!-- End Inputs -->

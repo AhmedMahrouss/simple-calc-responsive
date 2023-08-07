@@ -1,35 +1,223 @@
 :root{
 /*Start Theme1 Background */
---mainbackground: hsl(222, 26%, 31%);
---togglebackgroundkeypadbackground: hsl(223, 31%, 20%);
---screenbackground: hsl(224, 36%, 15%);
+--mainBackground: hsl(222, 26%, 31%);
+--input: hsl(223, 31%, 20%);
+--output: hsl(224, 36%, 15%);
 /* End Theme1 Background */
 
 /* Start Theme1 Keys  */
---keybackground: hsl(225, 21%, 49%);
---keyshadow: hsl(224, 28%, 35%);
---keybackgroundtoggle: hsl(6, 63%, 50%);
---keyshadow: hsl(6, 70%, 34%);
---keybackground: hsl(30, 25%, 89%);
---keyshadow: hsl(28, 16%, 65%);
+--dellReset: hsl(225, 21%, 49%);
+--keyscolor: hsl(224, 28%, 35%);
+--resetBoxShadow:hsl(224, 28%, 35%);
+--smallcircle: hsl(6, 63%, 50%);
+--boxShadowEqual: hsl(6, 70%, 34%);
+--keysBackground: hsl(30, 25%, 89%);
+--boxshadow: hsl(28, 16%, 65%);
 /* End Theme1 Keys */
 
 /* Start Theme1 Texts */
 --Verydarkgrayishblue: hsl(221, 14%, 31%);
---White: hsl(0, 0%, 100%);
+--pra: hsl(0, 0%, 100%);
 /* End Theme1 Texts */
 
 /* Start Theme2 Background */
---mainbackground: hsl(0, 0%, 90%);
---togglebackgroundkeypadbackground: hsl(0, 5%, 81%);
---screenbackground: hsl(0, 0%, 93%);
+--Lightgraymainbackground: hsl(0, 0%, 90%);
+--Grayishredtogglebackground: hsl(0, 5%, 81%);
+--Verylightgrayscreenbackground: hsl(0, 0%, 93%);
 /* End Theme2 Background */
 
 /* Start Theme2 Keys */
---keybackground: hsl(185, 42%, 37%);
---keyshadow: hsl(185, 58%, 25%);
---keybackgroundtoggle: hsl(25, 98%, 40%);
---keyshadow: hsl(25, 99%, 27%);
-
+--Darkmoderatecyankeybackground: hsl(185, 42%, 37%);
+--Verydarkcyankeyshadow: hsl(185, 58%, 25%);
+--Orangekeybackgroundtoggle: hsl(25, 98%, 40%);
+--Darkorangekeyshadow: hsl(25, 99%, 27%);
+--Lightgrayishyellowkeybackground: hsl(45, 7%, 89%);
+--Darkgrayishorangekeyshadow: hsl(35, 11%, 61%);
 /* End Theme2 Keys */
+
+/* Start Theme2 Texts */
+--Verydarkgrayishyellow: hsl(60, 10%, 19%);
+--Whitetext: hsl(0, 0%, 100%);
+/* End Theme2 Texts */
+
+/* Start Theme3 Background*/
+--Verydarkvioletmainbackground: hsl(268, 75%, 9%);
+--Verydarkviolettogglebackground: hsl(268, 71%, 12%);
+/* End Theme3 Background */
+
+/* Start Theme3 Keys */
+--Darkvioletkeybackground: hsl(281, 89%, 26%);
+--Vividmagentakeyshadow: hsl(285, 91%, 52%);
+--Purecyankeybackgroundtoggle: hsl(176, 100%, 44%);
+--Softcyankeyshadow: hsl(177, 92%, 70%);
+--Verydarkvioletkeybackground: hsl(268, 47%, 21%);
+--Darkmagentakeyshadow: hsl(290, 70%, 36%);
+/* End Theme3 Keys */
+
+/* Start Theme3 Texts */
+--Lightyellow: hsl(52, 100%, 62%);
+--Verydarkblue: hsl(198, 20%, 13%);
+--Whitetext: hsl(0, 0%, 100%);
+/* End Theme3 Texts */
+}
+/* Start General Style */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+/* End General Style */
+
+/* Start Body Style */
+body{
+width: 100%;
+min-height: 100vh;
+background: var(--mainBackground);
+display: flex;
+justify-content: center;
+padding: 25px;
+}
+/* End Body Style */
+
+/* Start Container Style */
+.container{
+width: 100%;
+}
+
+/* Start Title Style */
+.container .title{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 50px;
+
+}
+.container .themes{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.container .themes :first-child{
+margin: 0px 14px;
+}
+#text{
+margin-top: 27px;
+}
+.container .title .calc , .container .themes span:first-child , .container .changeTheme p:first-child{
+color: var(--pra); 
+font-size: 28px;
+font-weight: bold;
+}
+.container .themes span:first-child{
+font-size: 15px;
+text-transform: uppercase;
+font-weight: normal;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.container .changeTheme p:first-child{
+font-size: 15px;
+letter-spacing: 6px;
+margin-bottom: 5px;
+}
+.container .changeTheme #bigCircle{
+padding: 7px 1px;
+background-color: var(--input);
+border-radius: 20px;
+}
+.container .changeTheme #smallCircle{
+position: relative;
+left: -10px;
+padding: 1px 10px;
+background-color: var(--smallcircle);
+border-radius: 50%;
+cursor: pointer;
+transition: .5s;
+}
+/* End Title Style */
+
+/* Start Output Style*/
+.container .output{
+background-color: var(--output);
+padding: 30px;
+color: var(--pra);
+border-radius: 15px;
+font-size: 30px;
+font-weight: bold;
+direction: rtl;
+margin-bottom: 25px;
+}
+.container .output p{
+letter-spacing: 4px;
+}
+/* End Output Style */
+
+/* Start Inputs Style*/
+.container .inputs{
+width: 100%;
+background-color: var(--input);
+padding:30px 0px;
+height: auto;
+border-radius: 10px;
+}
+.container .inputs .row{
+width: 100%;
+margin-bottom: 20px;
+text-align: center;
+}
+.container .inputs .row span{
+background-color: var(--keysBackground);
+padding: 15px;
+display: inline-block;
+width: 20%;
+margin: 10px 5px;
+font-size: 25px;
+font-weight: bold;
+border-radius: 8px;
+color: var(--keyscolor);
+box-shadow: inset 0 -0.25rem var(--boxshadow);
+}
+#del , #reset{
+color: #fff;
+background-color: var(--dellReset);
+cursor: pointer;
+box-shadow: inset 0 -0.25rem var(--resetBoxShadow);
+}
+.btns{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.btns span{
+padding: 18px;
+border: none;
+font-size: 18px;
+font-weight: bold;
+text-transform: uppercase;
+width: 50%;
+margin: 0px 10px;
+border-radius: 8px;
+color: #fff;
+cursor: pointer;
+text-align: center;
+}
+#equal{
+background-color: var(--smallcircle);
+box-shadow: inset 0 -0.25rem var(--boxShadowEqual);
+}
+/* End Inputs Style*/
+
+/* End Container Style */
+
+@media (min-width:1000px) {
+.container{
+width: 40%;
+align-items: center;
+}
+.btns{
+padding: 0 30px;
+}
+.container .inputs .row span{
+width: 20%;
+}
 }
